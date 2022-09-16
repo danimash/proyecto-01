@@ -1,0 +1,153 @@
+/*---------------------------------- REDES SOCIALES ------------- */
+
+.redes {
+    display: flex;
+    padding: 25px 0 25px 15px;
+    align-items: center;
+    gap: 15px;
+}
+
+.redes h4 {
+    margin-bottom: 3px;
+    font-weight: 400;
+    color: #636363;
+}
+
+.redes .ico-contenedor {
+    padding: 4px 8px 4px 0;
+    display: flex;
+}
+
+.redes .ico-contenedor:hover {
+    background-color: #cecece;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1084px) {
+    .redes {
+        padding-left: 5%;
+    }
+}
+
+/*-------------------------------------- FOOOTER ----------- */
+
+footer {
+    background-color: #ebebeb;
+}
+
+.informacion {
+    margin-left: 20px;
+    padding: 40px 0 0;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+    align-items: flex-start;
+}
+
+.footer h4 {
+    font-size: 16px;
+    color: #464646;
+}
+
+.footer a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #464646;
+    padding: 1px 2px;
+}
+
+.footer a:active {
+    outline: dashed 3px #464646;
+}
+
+.footer a:hover {
+    color: #181818;
+}
+
+.politicas {
+    margin: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.idiomas p {
+    font-size: 12px;
+    color: #464646;
+    padding: 1px 2px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.terminos {
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.terminos p {
+    font-size: 12px;
+    color: #464646;
+    padding: 1px 2px;
+    margin-bottom: 8px;
+}
+
+.terminos a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #464646;
+    padding: 1px 2px;
+    margin-right: 5px;
+    margin-bottom: 8px;
+    display: inline;
+}
+
+.terminos a:active {
+    outline: dashed 3px #464646; 
+}
+
+.terminos a:hover {
+    color: #181818;
+}
+
+
+/*--------------- responsive ----- */
+
+@media screen and (min-width: 540px) {
+    .informacion {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .footer {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .terminos a {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (min-width: 1084px) {
+    .informacion {
+        width: 64%;
+        margin-left: 5%;
+    }
+    .footer {
+        width: 25%;
+        padding-right: 15px;
+    }
+
+    .politicas {
+        margin-left: 5%;
+        margin-right: 5%;  
+    }
+}
+

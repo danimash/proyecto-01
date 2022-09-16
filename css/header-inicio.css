@@ -1,0 +1,567 @@
+
+body {
+    font-family: Segoe UI,SegoeUI,Helvetica,Arial,sans-serif;
+}
+
+/*--------------------------------------------------- menu mobile first 320px ---------------- */
+
+/*-------- microsoft menu -------*/
+
+.header-mob-microsoft {
+    display: flex;
+    padding: 5px 10px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px rgb(223, 223, 223);
+    position: relative;
+}
+
+.btn-brow-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-brow-contenedor span {
+    font-size: 25px;
+    padding: 5px;
+}
+
+.btn-brow-contenedor span:hover {
+    cursor: pointer;
+    color: rgb(0, 94, 0);
+}
+
+.btn-oculto:active {
+    background-color: #d6d6d6;
+    box-shadow: 0 0 0 4px #d6d6d6,
+                0 0 0 6px #474747;
+}
+
+.buscar {
+    color: #474747;
+}
+
+.logo-micro {
+    width: 110px;
+    padding: 7px 1px;
+}
+
+.sesion-carrito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sesion-carrito a:first-child span {
+    font-size: 22px;
+    padding: 5px;
+    color: #474747;
+}
+
+.sesion-carrito a:nth-child(2) span {
+    font-size: 35px;
+    padding: 5px;
+    color: #474747;
+}
+
+.dash-bord:active {
+    outline: dashed 1px #474747;
+}
+
+/*------- menu oculto microsoft------- */
+
+#accion {
+    display: none;
+}
+
+.header-mob-microsoft .cerrar {
+    display: none;
+}
+
+#accion:checked + .header-mob-microsoft .cerrar {
+    display: block;
+}
+
+#accion:checked + .header-mob-microsoft .burger {
+    display: none;
+}
+
+.header-mob-microsoft .menu-oculto-microsoft {
+    display: none;
+}
+
+#accion:checked + .header-mob-microsoft .menu-oculto-microsoft {
+    background-color: rgb(231, 231, 231);
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 56.39px;
+    left: 0;
+    z-index: 200;
+    padding: 2px 0 2px;
+}
+
+.menu-oculto-microsoft ul,
+.menu-oculto-xbox ul {
+    width: 100%;
+}
+
+.menu-oculto-microsoft ul li,
+.menu-oculto-xbox ul li {
+    margin: 3px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 15px 10px;
+    border-bottom: solid 1px rgb(216, 216, 216);
+    color: #202020;
+}
+
+.menu-oculto-microsoft ul li:active,
+.menu-oculto-xbox ul li:active {
+    outline: dashed 1px #474747 ;
+}
+
+.menu-oculto-microsoft ul li span,
+.menu-oculto-xbox ul li span {
+    color: #888888;
+    font-size: 19px;
+}
+
+
+/*----------- xbox menu -----------*/
+
+.header-mob-xbox {
+    display: flex;
+    border-bottom: solid 1px rgb(223, 223, 223);
+    padding: 1px 10px;
+    position: relative;
+}
+
+.click-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.logo-xbox {
+    width: 66px;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.icono-expand {
+    margin-left: 10px;
+    font-size: 15px;
+    color: #696969;
+    display: flex;
+    align-items: center;
+}
+
+/*---------- menu oculto xbox --------*/
+
+#accionx,
+.menu-oculto-xbox {
+    display: none;
+}
+
+.click-logo:active .logo-xbox {
+    outline: dashed 1px #474747;
+}
+
+#accionx:checked + .header-mob-xbox .menu-oculto-xbox {
+    background-color: rgb(231, 231, 231);
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 32.95px;
+    left: 0;
+    z-index: 190;
+    padding: 2px 0 2px;
+}
+
+.menu-oculto-xbox ul li {
+    padding: 13px 10px;
+}
+
+#accionx:checked + .header-mob-xbox .icono-expand span {
+    transform: rotate(180deg);
+}
+
+/*--------------------------------------------------------------------------- menu escritorio ---------------------------- */
+
+.header-escritorio {
+    display: none;
+}
+
+@media screen and (min-width: 860px) {
+    .header-mob-microsoft,
+    .header-mob-xbox,
+    .logo-nav-contenedor nav div:nth-child(3),
+    .logo-nav-contenedor nav div:nth-child(4),
+    .logo-nav-contenedor nav div:nth-child(5),
+    .logo-nav-contenedor nav div:nth-child(6),
+    .sesion-carrito-contenedor .ocultar {
+        display: none;
+    }
+
+    .header-escritorio {
+        display: flex;
+        justify-content: space-between;
+        padding: 3px 20px;
+        margin: 0 10px;
+    }
+
+    .logo-nav-contenedor,
+    .logos-contenedor,
+    .logo-nav-contenedor nav,
+    .sesion-carrito-contenedor,
+    .enlaces {
+        display: flex;
+    }
+
+    .logos-contenedor {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logos-contenedor .logo-micro {
+        padding: 12px 0;
+    }
+
+    .logos-contenedor .barra-separacion {
+        width: 2px;
+        background-color: #000;
+        height: 50%;
+        margin: 0 19px;
+    }
+
+    .hovers-nav {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        box-shadow: 1px 1px 4px .5px #727272;
+        bottom: -18px;
+        font-size: 13px;
+        padding: 3px 2px;
+    }
+
+    .logos-contenedor .logo-xbox {
+        padding: 14px 0;
+        width: 76px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .logos-contenedor .logo-xbox:hover .hovers-nav {
+        display: flex;
+    }
+
+    .logo-nav-contenedor nav {
+        margin-left: 15px;
+        cursor: pointer;
+    }
+
+    .enlaces {
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        gap: 2px;
+        padding: 0 7px;
+        cursor: pointer;
+    }
+
+    .enlaces p {
+        border-bottom: solid 2px transparent;
+        line-height: 25px;
+    }
+
+    .enlaces:hover p {
+        border-bottom: solid 2px #000;
+    }
+
+    .enlaces span {
+        font-size: 17px;
+        color: #888888;
+    }
+
+    .sesion-carrito-contenedor .buscar {
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .sesion-carrito-contenedor .buscar span {
+        font-size: 25px;
+    }
+
+    .sesion-carrito-contenedor .buscar:hover .hovers-nav {
+        display: flex;
+        width: 120px;
+        text-decoration: none;
+        border: none;
+        bottom: -12px;
+        font-size: 13px;
+        padding: 9px 2px 11px;
+        line-height: 0;
+    }
+
+    .carro {
+        position: relative;
+    }
+
+    .sesion-carrito-contenedor .carro:hover .hovers-nav {
+        display: flex;
+        width: 210px;
+        bottom: -22px;
+        left: -120px;
+    }
+
+}
+
+@media screen and (min-width: 951px) {
+    .logo-nav-contenedor nav div:nth-child(3) {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1002px) {
+    .logo-nav-contenedor nav div:nth-child(4) {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1084px) {
+    .header-escritorio {
+        padding: 3px 50px;
+    }
+}
+
+@media screen and (min-width: 1170px) {
+    .logo-nav-contenedor nav div:nth-child(5) {
+        display: flex;
+    }
+}
+
+.sesion-carrito a {
+    text-decoration: none;
+    color: #000;
+}
+
+@media screen and (min-width: 1400px) {
+    .sesion-carrito-contenedor .ocultar {
+        display: block;
+    }
+
+    .sesion-carrito-contenedor .buscar span {
+        font-size: 25px;
+        margin-left: 5px;
+    }
+
+    .sesion-carrito-contenedor .carro:hover .hovers-nav {
+        bottom: -12px;
+        left: -50px;
+    }
+
+    .sesion-carrito-contenedor .ses {
+        display: flex;
+        align-items: center;
+        padding: 0 5px;
+    }
+
+    .sesion-carrito a:first-child {
+        padding: 9px 8px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .logo-nav-contenedor nav div:nth-child(6) {
+        display: flex;
+    }
+}
+
+/*---------------------------------------------------------------- fondo principal ----------*/
+
+.principal-contenedor {
+    background-image: url(../imagenes/Principal/fondo-mobile.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.minecraft-preview {
+    text-align: center;
+    margin: 77% 20px 5%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.minecraft-preview .amarillo {
+    background-color: #ffd800;
+    color: #000;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 1px 8px;
+}
+
+.minecraft-preview h2 {
+    margin: 15px 0;
+    font-size: 26px;
+}
+
+.minecraft-preview p:nth-child(3) {
+    margin-bottom: 5px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+    gap: 5px;
+    padding: 3px 20px;
+    position: relative;
+}
+
+.btn:active {
+    transform: scale(.97);
+    transition: transform .1s;
+}
+
+.btn a::after {
+    content: '';
+    width: 73%;
+    background-color: #054b16;
+    height: 0px;
+    position: absolute;
+    left: 20px;
+    top: 22px;
+    transition: all .1s;
+}
+
+.btn:hover a::after {
+    height: 2.5px;
+    transition: all .1s;
+}
+
+.btn span {
+    font-size: 17px;
+    font-weight: 800;
+    border: solid 2.5px transparent;
+}
+
+.btn-green {
+    background-color: #9bf00b;
+    color: #054b16;
+    border: solid 2.5px transparent;
+    transition: all .1s;
+}
+
+.btn-green:hover {
+    background-color: #81c906;
+}
+
+.principal-contenedor .botones-falsos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 35px 5px 10px;
+    gap: 12px;
+}
+
+.botones-falsos .pause {
+    background-color: #00000060;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.botones-falsos .circle {
+    background-color: #00000060;
+    display: flex;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.circle .black, 
+.circle .white {
+    width: 12px;
+    height: 12px;
+    border: solid 1px #fff;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.circle .black:hover {
+    background-color: #474747;
+}
+
+.circle .white {
+    background-color: #fff;
+}
+
+/*-------------- principal responsive -----------*/
+
+@media screen and (min-width: 351px) {
+    .minecraft-preview {
+        margin: 69% 20px 5%;
+    }
+    .minecraft-preview p:nth-child(3) {
+        margin: 5px 0 8%;
+    }
+}
+
+@media screen and (min-width: 540px) {
+    .minecraft-preview h2 {
+        font-size: 45px;
+    }
+
+    .minecraft-preview p:nth-child(3) {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .principal-contenedor {
+        background-image: url(../imagenes/Principal/fondo-tablet.jpg);
+        background-size: cover;
+    }
+    .minecraft-preview p:nth-child(3) {
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-width: 1084px) {
+    .principal-contenedor {
+        background-image: url(../imagenes/Principal/fondo-desktop.jpg);
+    }
+
+    .minecraft-preview {
+        text-align: initial;
+        margin: 9% 5% 5% auto;
+        align-items: flex-start;
+        width: 455px;
+    }
+
+    .principal-contenedor .botones-falsos {
+        margin: 4% 0 1%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .minecraft-preview {
+        margin: 9% 12% 5% auto;
+    }
+}
+

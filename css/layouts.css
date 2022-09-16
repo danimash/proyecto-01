@@ -1,0 +1,460 @@
+/*------------------------------------------------------- enlaces iconos ---------------------*/
+
+.enlace-iconos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    margin: 30px auto;
+    row-gap: 30px;
+    max-width: 250px;
+}
+
+.enlace-iconos .enlace {
+    text-align: center;
+    color: #107c10;
+    cursor: pointer;
+}
+
+.enlace .image-contenedor {
+    width: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.enlace .image-contenedor img {
+    width: 55%;
+}
+
+.enlace h4 {
+    font-weight: 500;
+    display: inline-block;
+    border-bottom: solid 3px transparent;
+    transition: border .2s;
+}
+
+.iniciar h4 {
+    width: 50%;
+    margin: auto;
+}
+
+.juega {
+    margin-top: 21px;
+}
+
+.enlace:hover h4 {
+    border-bottom: solid 3px #107c10;
+}
+
+.enlace:active .image-contenedor {
+    outline: dashed 2px #000;
+}
+
+/*---------------------- responsive ---------- */
+
+@media screen and (min-width: 400px) {
+    .enlace-iconos {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 20px;
+        margin: 30px 40px;
+        max-width: 500px;
+    }
+
+    .accesorios {
+        margin-top: 21px;
+    }
+}
+
+@media screen and (min-width: 540px) {
+    .enlace-iconos {
+        margin: 40px auto;
+        max-width: 500px;
+    }
+    .enlace .image-contenedor {
+        width: auto;
+    }
+
+    .enlace .image-contenedor img {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .enlace-iconos {
+        grid-template-columns: repeat(6, auto);
+        grid-template-rows: auto;
+        max-width: 800px;
+    }
+
+    .enlace-iconos .enlace {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .enlace .image-contenedor {
+        width: 100px;
+    }
+
+    .enlace .image-contenedor img {
+        width: 65%;
+    }
+}
+
+@media screen and (min-width: 1084px) {
+    .enlace-iconos {
+        max-width: 900px;
+        margin: 30px auto 50px;
+    }
+    .enlace .image-contenedor img {
+        width: 73%;
+    }
+}
+
+/*--------------------------------------------------------------------- lAYOUT 1 -------------------------------------------- */
+
+/*--------- gran venta seccion -------- */
+
+.layout-contenedor {
+    padding: 0px 8px;
+    display: grid;
+    gap: 5px;
+    overflow: hidden;
+}
+
+.layout-mob {
+    position: relative;
+}
+
+.separador {
+    height: 10vh;
+}
+
+.descripcion-layout {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    font-size: 17px;
+    background-color: #303030;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 10px;
+}
+
+.descripcion-layout h2 {
+    margin-top: 6%;
+}
+
+.descripcion-layout p {
+    font-size: .9em;
+    margin: 7% 0;
+}
+
+.descripcion-layout .boton {
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+    gap: 5px;
+    padding: 3px 3px;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 6%;
+}
+
+.descripcion-layout .boton-trans a {
+    position: relative;
+    display: flex; /* para el control del after */
+} 
+
+.descripcion-layout .boton-trans a::after {
+    content: '';
+    width: 100%;
+    background-color: #9bf00b;
+    height: 0px;
+    position: absolute;
+    transition: height .08s ease;
+    top: 105%;
+}
+
+.descripcion-layout .boton-trans:hover a::after {
+    height: 2px;
+}
+
+.descripcion-layout .boton-trans {
+    border: solid 2.5px transparent;
+    transition: color .2s;
+    font-size: .9em;
+}
+
+.descripcion-layout .boton-trans:hover {
+    color: #9bf00b;
+}
+
+.descripcion-layout .boton-trans:active {
+    outline: dashed 3px #fff;
+}
+
+.img-contenedor {
+    cursor: pointer;
+}
+
+.layout-x .descripcion-layout {
+    cursor: pointer;
+}
+
+/*---------- game pass seccion ---------- */
+
+.layout-x .img-contenedor .desk {
+    display: none;
+}
+
+.layout-x .img-contenedor .mob {
+    display: flex;
+}
+
+.layout-x .descripcion-layout {
+    position: relative;
+    background-color: #107c10;
+}
+
+/*--------- CONTROL SECCION -------- */
+
+.control .descripcion-layout {
+    background-color: transparent;
+    color: #000;
+}
+
+.control .boton-trans a::after {
+    background-color: #000;
+}
+
+.control .boton-trans:hover {
+    color: #000;
+}
+
+.control .boton-trans:active {
+    outline: dashed 3px rgb(0, 0, 0);
+}
+
+.layout-x .boton-trans:active {
+    outline: none;
+}
+
+/*----------------------------------------- Responsive layout 1 -------------- */
+
+@media screen and (min-width: 540px) {
+    .separador {
+        display: none;
+    }
+
+    .descripcion-layout {
+        background-color: transparent;
+    }
+
+    .layout-y .descripcion-layout h2 {
+        font-size: 35px;
+    }
+
+    .layout-mob .descripcion-layout p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .layout-y .descripcion-layout h2 {
+        font-size: 45px;
+    }
+
+    .layout-x .descripcion-layout h2 {
+        font-size: 35px;
+    }
+
+    .layout-mob .descripcion-layout p {
+        font-size: 20px;
+    }
+
+    .descripcion-layout {
+        padding: 10px 25px;
+    }
+    
+    .descripcion-layout p {
+        font-size: .9em;
+        margin: 4% 0;
+    }
+} 
+
+@media screen and (min-width: 1084px) {
+    .layout-contenedor {
+        grid-template-areas: 
+            "venta venta pass pass"
+            "venta venta control control"
+            "forza forza control control";
+    }
+
+    .gran-venta {
+        grid-area: venta;
+    }
+
+    .g-pass {
+        grid-area: pass;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .control {
+        grid-area: control;
+    }
+
+    .forza {
+        grid-area: forza;
+        display: flex;
+    }
+    
+    .layout-x .img-contenedor .desk {
+        display: flex;
+        height: 100%;
+    }
+    
+    .layout-x .img-contenedor .mob {
+        display: none;
+    }
+
+    .layout-x .descripcion-layout,
+    .layout-x .img-contenedor {
+        min-width: 50%;
+        overflow: hidden;
+        transition: all .3s;
+    }
+
+    .layout-x .img-contenedor img {
+        transition: all .3s;
+    }
+
+    .layout-y .img-contenedor {
+        height: 100%;
+    }
+
+    .layout-y .img-contenedor img {
+        height: 100%;
+    }
+
+    .layout-x .img-contenedor img {
+        width: 100%;
+    }
+
+    .layout-x .img-contenedor:hover img {
+        transform: scale(1.1);
+        transition: all .3s;
+    }
+
+    .layout-y .descripcion-layout {
+        padding: 10px 6% 4%;
+    }
+
+    .layout-x .descripcion-layout {
+        justify-content: center;
+        gap: 20px;
+        padding: 10px 6%;
+    }
+
+    .layout-x .descripcion-layout h2 {
+        font-size: 20px;
+    }
+
+    .layout-y {
+        min-width: 530px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .layout-x .descripcion-layout h2 {
+        font-size: 35px;
+    }
+}
+
+
+/*-------------------------------------------------- LAYOUT 2 ------------------------ */
+
+.layout-contenedor2 {
+    padding: 0px 8px;
+    display: grid;
+    gap: 5px;
+    overflow: hidden;
+}
+
+.nba .descripcion-layout h2 {
+    margin-bottom: 10%;
+}
+
+.dusk .descripcion-layout .boton-trans {
+    background-color: #9bf00b;
+    padding: 3px 10px;
+    transition: background .3s;
+}
+
+.dusk .descripcion-layout .boton-trans:hover {
+    background-color: #84c417;
+}
+
+.fortnite .descripcion-layout {
+    background-color: #303030;
+}
+
+/*--------- DUSK SECCION -------- */
+
+.dusk .descripcion-layout {
+    background-color: #fff;
+    color: #000;
+}
+
+.dusk .boton-trans a::after {
+    background-color: #000;
+}
+
+.dusk .boton-trans:hover {
+    color: #000;
+}
+
+.dusk .boton-trans:active {
+    outline: dashed 3px rgb(0, 0, 0);
+}
+
+@media screen and (min-width:540px) {
+    .dusk .descripcion-layout {
+        background-color: transparent;
+    }
+}
+
+@media screen and (min-width: 1084px) {
+    .layout-contenedor2 {
+        grid-template-areas: 
+            "midgard midgard nba nba"
+            "dusk dusk nba nba"
+            "dusk dusk fortnite fortnite";
+    }
+
+    .nba {
+        grid-area: nba;
+    }
+
+    .midgard {
+        grid-area: midgard;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .dusk {
+        grid-area: dusk;
+    }
+
+    .fortnite {
+        grid-area: fortnite;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
